@@ -41,7 +41,7 @@
 #define ALPHA_ambigiousPROTEIN 23
 #define ALPHA_redPROTEIN 13
 #define ALPHA_redPROTEIN2 8
-#define ALPHA_defDNA 5
+#define ALPHA_defDNA 26
 
 #define ALPHA_UNKNOWN 255
 #define ALPHA_UNDEFINED -1

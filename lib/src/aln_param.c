@@ -21,12 +21,12 @@ int aln_param_init(struct aln_param **aln_param,int biotype , int n_threads, int
         ap->subm = NULL;
 
         ap->nthreads = n_threads;
-        MMALLOC(ap->subm,sizeof (float*) * 23);
+        MMALLOC(ap->subm,sizeof (float*) * 26);
 
-        for (int i = 23;i--;){
+        for (int i = 26;i--;){
                 ap->subm[i] = NULL;
-                MMALLOC(ap->subm[i],sizeof(float) * 23);
-                for (int j = 23;j--;){
+                MMALLOC(ap->subm[i],sizeof(float) * 26);
+                for (int j = 26;j--;){
                         ap->subm[i][j] = 0.0f;
                 }
         }
