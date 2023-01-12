@@ -183,11 +183,29 @@ int set_subm_gaps_CorBLOSUM66_13plus(struct aln_param* ap)
         return OK;
 }
 
-int set_subm_gaps_DNA(struct aln_param *ap)
+int set_subm_gaps_DNA0(struct aln_param *ap)
 {
         int i,j;
         for(i = 0; i < 5; i++){
                 for(j =0; j < 5;j++){
+                        ap->subm[i][j] = -4;
+                        if(i == j){
+                                ap->subm[i][j] = 5;
+                        }
+                }
+        }
+        ap->gpo = 8;
+        ap->gpe = 6;
+        ap->tgpe = 0;
+        return OK;
+}
+
+int set_subm_gaps_DNA(struct aln_param *ap)
+{
+	int len_code = 26;
+        int i,j;
+        for(i = 0; i < len_code; i++){
+                for(j =0; j < len_code;j++){
                         ap->subm[i][j] = -4;
                         if(i == j){
                                 ap->subm[i][j] = 5;

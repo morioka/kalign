@@ -76,6 +76,13 @@ int dealign_msa(struct msa* msa)
 
 int detect_alphabet(struct msa* msa)
 {
+
+        msa->biotype = ALN_BIOTYPE_DNA;
+	return OK;
+}
+
+int detect_alphabet0(struct msa* msa)
+{
         int i;
 
         double DNA[128];

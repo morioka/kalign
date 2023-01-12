@@ -225,7 +225,7 @@ int create_protein_BZX(struct alphabet* a)
 }
 
 
-int create_default_DNA(struct alphabet* a)
+int create_default_DNA0(struct alphabet* a)
 {
 
         char dnacode[16] = "ACGTUNRYSWKMBDHV";
@@ -262,6 +262,28 @@ int create_default_DNA(struct alphabet* a)
         merge_codes(a,'N','D');
         merge_codes(a,'N','H');
         merge_codes(a,'N','V');
+
+        return OK;
+}
+
+
+
+int create_default_DNA(struct alphabet* a)
+{
+
+        char dnacode[26] = "ABCDEFGHIJKLMNOPQRSTUVWXY";
+
+	int len_dnacode = 26;
+
+        int code;
+        int i;
+        code = 0;
+        for(i = 0; i < len_dnacode;i++){
+                //fprintf(stdout,"%c %d CODE: %d\n", aacode[i], (int) aacode[i], code);
+                a->to_internal[(int) dnacode[i]] = code;
+
+                code++;
+        }
 
         return OK;
 }
