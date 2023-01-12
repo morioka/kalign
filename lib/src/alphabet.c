@@ -271,7 +271,7 @@ int create_default_DNA0(struct alphabet* a)
 int create_default_DNA(struct alphabet* a)
 {
 
-        char dnacode[26] = "ABCDEFGHIJKLMNOPQRSTUVWXY";
+        char dnacode[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	int len_dnacode = 26;
 
